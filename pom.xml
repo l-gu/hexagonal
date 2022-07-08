@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.demo</groupId>
+	<artifactId>hexagonal</artifactId>
+	<version>${revision}</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<!-- Unique entry point for version management -->
+		<revision>0.0.1-SNAPSHOT</revision>
+		<!-- Other properties -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<modules>
+		<module>hexagonal-core</module>
+		<module>hexagonal-left-side</module>
+		<module>hexagonal-right-side</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.demo.orders</groupId>
+				<artifactId>orders-domain</artifactId>
+				<version>${revision}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.0</version>
+				<configuration>
+					<source>12</source>
+					<target>12</target>
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
+
+</project>
