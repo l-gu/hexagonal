@@ -2,39 +2,43 @@ package org.demo.myapp.core.domain.model;
 
 import java.math.BigDecimal;
 
+import org.demo.myapp.core.domain.commons.AggregateRoot;
+
 /**
  * @author laguerin
  *
  */
-public class Book {
+public class Book extends AggregateRoot<BookId> {
 	
-	private int  id ;
+	private final BookId  id ;
+	
 	private String title ;
 	private BigDecimal price;
 	
 
 	/**
-	 * Default constructor with reduced visibility (usable only in domain package)
+	 * Constructor with reduced visibility (usable only in domain package)
 	 */
-	Book() {
+	Book(BookId id) {
 		super();
+		this.id = id ;
 	}
 	
 	/**
 	 * Standard getter (usable everywhere)
 	 * @return
 	 */
-	public int getId() {
+	public BookId getId() {
 		return id;
 	}
 	
-	/**
-	 * Setter with reduced visibility (usable only in domain package)
-	 * @param title
-	 */
-	void setId(int id) {
-		this.id = id;
-	}
+//	/**
+//	 * Setter with reduced visibility (usable only in domain package)
+//	 * @param title
+//	 */
+//	void setId(BookId id) {
+//		this.id = id;
+//	}
 	
 	/**
 	 * Standard getter (usable everywhere)

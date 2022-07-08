@@ -1,6 +1,7 @@
 package org.demo.myapp.left.adapters.rest.controllers;
 
 import org.demo.myapp.core.domain.model.Book;
+import org.demo.myapp.core.domain.model.BookId;
 import org.demo.myapp.core.ports.input.BookService;
 import org.demo.myapp.left.adapters.rest.dto.BookDTO;
 import org.demo.myapp.left.adapters.rest.mappers.BookRestMapper;
@@ -17,7 +18,7 @@ public class BookRestController {
 	}
 
 	public void findById(int id) {
-		Book book = bookService.findBook(id);
+		Book book = bookService.findBook(new BookId(id));
 		BookDTO bookDTO = bookRestMapper.toBookDTO(book);
 		// return http response
 	}

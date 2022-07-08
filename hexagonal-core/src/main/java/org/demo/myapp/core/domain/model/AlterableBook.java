@@ -11,17 +11,17 @@ public class AlterableBook extends Book {
 	/**
 	 * Default constructor with reduced visibility (usable only in domain package)
 	 */
-	AlterableBook() {
-		super();
+	AlterableBook(BookId id) {
+		super(id);
 	}
 	
-	/**
-	 * Public setter 
-	 * @param id
-	 */
-	public void setId(int id) {
-		super.setId(id);
-	}
+//	/**
+//	 * Public setter 
+//	 * @param id
+//	 */
+//	public void setId(BookId id) {
+//		super.setId(id);
+//	}
 	
 	/**
 	 * Public setter 

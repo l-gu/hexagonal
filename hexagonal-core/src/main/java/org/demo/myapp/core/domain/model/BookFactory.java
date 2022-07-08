@@ -6,11 +6,11 @@ public class BookFactory {
 	 * Restricted visibility (package)
 	 * @return
 	 */
-	Book createBook() {
-		return new Book();
+	Book createBook(BookId id) {
+		return new Book(id);
 	}
 
-	public AlterableBook createAlterableBook() {
-		return new AlterableBook();
+	public AlterableBook createAlterableBook(BookId id) {
+		return new AlterableBook(id);
 	}
 }
