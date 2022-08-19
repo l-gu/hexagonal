@@ -10,7 +10,7 @@ public class BookFactory {
 		return new Book(id);
 	}
 
-	public AlterableBook createAlterableBook(BookId id) {
-		return new AlterableBook(id);
+	public MutableBook createMutableBook(BookId id) {
+		return new MutableBook(id);
 	}
 }

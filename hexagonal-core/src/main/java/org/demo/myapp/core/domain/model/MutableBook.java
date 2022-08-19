@@ -6,12 +6,12 @@ import java.math.BigDecimal;
  * @author laguerin
  *
  */
-public class AlterableBook extends Book {
+public class MutableBook extends Book {
 	
 	/**
 	 * Default constructor with reduced visibility (usable only in domain package)
 	 */
-	AlterableBook(BookId id) {
+	MutableBook(BookId id) {
 		super(id);
 	}
 	
