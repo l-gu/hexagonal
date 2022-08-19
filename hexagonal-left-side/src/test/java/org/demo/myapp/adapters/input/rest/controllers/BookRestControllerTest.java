@@ -1,7 +1,6 @@
-package org.demo.myapp.left.adapters.rest.controllers;
+package org.demo.myapp.adapters.input.rest.controllers;
 
 import org.demo.myapp.core.application.services.BookManagementServiceImpl;
-import org.demo.myapp.core.ports.input.BookManagementService;
 import org.junit.Test;
 
 public class BookRestControllerTest {

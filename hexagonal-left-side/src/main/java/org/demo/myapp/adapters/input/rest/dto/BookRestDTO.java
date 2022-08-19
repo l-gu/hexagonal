@@ -1,4 +1,4 @@
-package org.demo.myapp.left.adapters.rest.dto;
+package org.demo.myapp.adapters.input.rest.dto;
 
 import java.math.BigDecimal;
 

@@ -10,13 +10,13 @@
 	</parent>
 
 	<artifactId>hexagonal-right-side</artifactId>
+	<!-- inherit the version from the parent  -->
 
 	<dependencies>
-		<!-- project modules dependencies -->
+		<!-- project modules dependencies (version inherited from parent POM) -->
 		<dependency>
 			<groupId>org.demo</groupId>
 			<artifactId>hexagonal-core</artifactId>
-			<version>${revision}</version>
 		</dependency>
 	</dependencies>
 

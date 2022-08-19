@@ -5,6 +5,8 @@ import org.demo.myapp.core.ports.input.BookManagementService;
 
 public class BookManagementServiceImpl implements BookManagementService {
 
+	
+	
 	public Book findBook(long id) {
 		//Book book = bookRepository.find(id);
 		Book book ;

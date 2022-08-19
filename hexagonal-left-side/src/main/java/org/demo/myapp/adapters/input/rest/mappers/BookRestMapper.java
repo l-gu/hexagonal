@@ -1,9 +1,9 @@
-package org.demo.myapp.left.adapters.rest.mappers;
+package org.demo.myapp.adapters.input.rest.mappers;
 
+import org.demo.myapp.adapters.input.rest.dto.BookRestDTO;
 import org.demo.myapp.core.domain.model.Book;
 import org.demo.myapp.core.domain.model.BookFactory;
 import org.demo.myapp.core.domain.model.MutableBook;
-import org.demo.myapp.left.adapters.rest.dto.BookRestDTO;
 
 public class BookRestMapper {
 	

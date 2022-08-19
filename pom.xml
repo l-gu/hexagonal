@@ -37,18 +37,12 @@
      To specify the version and/or scope in the parent (not in the child POM) -->
 	<dependencyManagement> 
 		<dependencies>
-<!-- 
-			<dependency>
-				<groupId>org.demo.orders</groupId>
-				<artifactId>orders-domain</artifactId>
-				<version>${revision}</version>
-			</dependency>
- -->
 			<dependency>
 				<groupId>org.demo</groupId>
 				<artifactId>hexagonal-core</artifactId>
 				<version>${revision}</version>
 			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 
