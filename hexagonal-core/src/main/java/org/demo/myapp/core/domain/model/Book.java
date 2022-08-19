@@ -8,18 +8,17 @@ import org.demo.myapp.core.domain.commons.AggregateRoot;
  * @author laguerin
  *
  */
-public class Book extends AggregateRoot<BookId> {
+public class Book extends AggregateRoot<Long> {
 	
-	private final BookId  id ;
+	private final Long  id ;
 	
 	private String title ;
 	private BigDecimal price;
 	
-
 	/**
 	 * Constructor with reduced visibility (usable only in domain package)
 	 */
-	Book(BookId id) {
+	Book(long id) {
 		super();
 		this.id = id ;
 	}
@@ -28,7 +27,7 @@ public class Book extends AggregateRoot<BookId> {
 	 * Standard getter (usable everywhere)
 	 * @return
 	 */
-	public BookId getId() {
+	public long getId() {
 		return id;
 	}
 	

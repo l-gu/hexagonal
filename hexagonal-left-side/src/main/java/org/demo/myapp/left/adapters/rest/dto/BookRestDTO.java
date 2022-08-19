@@ -6,21 +6,21 @@ import java.math.BigDecimal;
  * @author lguerin
  *
  */
-public class BookDTO {
+public class BookRestDTO {
 	
-	private int id ;
+	private long id ;
 	private String title ;
 	private BigDecimal price;
 	
 
-	public BookDTO() {
+	public BookRestDTO() {
 		super();
 	}
 	
-	public int getId() {
+	public long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	

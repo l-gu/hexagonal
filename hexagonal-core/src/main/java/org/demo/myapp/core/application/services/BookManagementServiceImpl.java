@@ -1,12 +1,11 @@
 package org.demo.myapp.core.application.services;
 
 import org.demo.myapp.core.domain.model.Book;
-import org.demo.myapp.core.domain.model.BookId;
-import org.demo.myapp.core.ports.input.BookService;
+import org.demo.myapp.core.ports.input.BookManagementService;
 
-public class BookServiceImpl implements BookService {
+public class BookManagementServiceImpl implements BookManagementService {
 
-	public Book findBook(BookId id) {
+	public Book findBook(long id) {
 		//Book book = bookRepository.find(id);
 		Book book ;
 		return null;

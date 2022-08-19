@@ -22,11 +22,31 @@
 		<module>hexagonal-right-side</module>
 	</modules>
 
-	<dependencyManagement>
+	<!-- "dependencies" : ALWAYS be included as a dependency of the child modules -->
+	<dependencies> 
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.13.2</version>
+		    <scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<!-- "dependencyManagement" : only be included in the child module 
+     if they were also specified in the <dependencies> section of the child module itself.
+     To specify the version and/or scope in the parent (not in the child POM) -->
+	<dependencyManagement> 
 		<dependencies>
+<!-- 
 			<dependency>
 				<groupId>org.demo.orders</groupId>
 				<artifactId>orders-domain</artifactId>
+				<version>${revision}</version>
+			</dependency>
+ -->
+			<dependency>
+				<groupId>org.demo</groupId>
+				<artifactId>hexagonal-core</artifactId>
 				<version>${revision}</version>
 			</dependency>
 		</dependencies>

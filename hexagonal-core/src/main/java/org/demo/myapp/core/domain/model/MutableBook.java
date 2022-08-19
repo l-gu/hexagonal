@@ -11,7 +11,7 @@ public class MutableBook extends Book {
 	/**
 	 * Default constructor with reduced visibility (usable only in domain package)
 	 */
-	MutableBook(BookId id) {
+	MutableBook(long id) {
 		super(id);
 	}
 	

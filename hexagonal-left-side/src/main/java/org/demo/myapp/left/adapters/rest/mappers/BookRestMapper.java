@@ -1,34 +1,42 @@
 package org.demo.myapp.left.adapters.rest.mappers;
 
-import org.demo.myapp.core.domain.model.MutableBook;
 import org.demo.myapp.core.domain.model.Book;
 import org.demo.myapp.core.domain.model.BookFactory;
-import org.demo.myapp.core.domain.model.BookId;
-import org.demo.myapp.left.adapters.rest.dto.BookDTO;
+import org.demo.myapp.core.domain.model.MutableBook;
+import org.demo.myapp.left.adapters.rest.dto.BookRestDTO;
 
 public class BookRestMapper {
-
-	private BookFactory bookFactory ;
 	
-	public BookRestMapper(BookFactory bookFactory) {
-		super();
-		this.bookFactory = bookFactory;
+	private static final BookRestMapper singleInstance = new BookRestMapper();
+	
+	public static BookRestMapper getInstance() {
+		return singleInstance;
 	}
+	
+	/**
+	 * Private constructor (singleton : use getInstance)
+	 */
+	private BookRestMapper() {	
+	}
+	
 
-	public Book toBook(BookDTO bookDTO) {
-		// Book book = bookFactory.createAlterableBook();
-		BookId bookId = new BookId(bookDTO.getId());
-		
-		MutableBook book = bookFactory.createMutableBook(bookId);
-//		book.setId(new BookId(bookDTO.getId()) );
+//	private final BookFactory bookFactory ;
+//	
+//	public BookRestMapper() {
+//		super();
+//		this.bookFactory = BookFactory.getInstance();
+//	}
+
+	public Book dtoToDomain(BookRestDTO bookDTO) {
+		MutableBook book = BookFactory.getInstance().createMutableBook(bookDTO.getId());
 		book.setTitle(bookDTO.getTitle());
 		book.setPrice(bookDTO.getPrice());
 		return book;
 	}
 
-	public BookDTO toBookDTO(Book book) {
-		BookDTO bookDTO = new BookDTO();
-		bookDTO.setId(book.getId().getId());
+	public BookRestDTO domainToDto(Book book) {
+		BookRestDTO bookDTO = new BookRestDTO();
+		bookDTO.setId(book.getId());
 		bookDTO.setTitle(book.getTitle());
 		bookDTO.setPrice(book.getPrice());
 		return bookDTO;
