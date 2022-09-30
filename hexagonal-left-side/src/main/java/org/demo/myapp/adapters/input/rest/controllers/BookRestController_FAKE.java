@@ -1,33 +1,29 @@
 package org.demo.myapp.adapters.input.rest.controllers;
 
-import java.util.Optional;
-
 import org.demo.myapp.adapters.input.rest.dto.BookRestDTO;
 import org.demo.myapp.adapters.input.rest.mappers.BookRestMapper;
 import org.demo.myapp.core.domain.model.Book;
 import org.demo.myapp.core.ports.input.BookManagementService;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping(value = "/api/books", produces = MediaType.APPLICATION_JSON_VALUE)
-public class BookRestController {
+public class BookRestController_FAKE {
 
 	private BookManagementService bookService ;
 	
-	public BookRestController(BookManagementService bookService) {
+	public BookRestController_FAKE(BookManagementService bookService) {
 		super();
 		this.bookService = bookService;
 	}
 
-    @GetMapping("/{id}")
-    Optional<BookRestDTO> httpRestGetBookById(@PathVariable long id) {
+	
+	public int httpRestGetBookById(long id) {
 		BookRestDTO dto = findById(id);
-		return Optional.of(dto);
-    }
+		if ( dto != null ) {
+			return 200; // OK
+		}
+		else {
+			return 404; // NOT FOUND
+		}
+	}
 
 	protected BookRestDTO findById(long id) {
 		Book book = bookService.findBook(id);

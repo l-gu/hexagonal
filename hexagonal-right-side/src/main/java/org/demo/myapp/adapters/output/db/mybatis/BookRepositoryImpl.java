@@ -6,7 +6,9 @@ import org.demo.myapp.core.domain.model.Book;
 import org.demo.myapp.core.domain.model.BookFactory;
 import org.demo.myapp.core.domain.model.MutableBook;
 import org.demo.myapp.core.ports.output.db.BookRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class BookRepositoryImpl implements BookRepository {
 
 	@Override

@@ -3,6 +3,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
+	
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.4</version>
+        <relativePath /><!-- lookup parent from repository -->
+    </parent>
+    	
 	<groupId>org.demo</groupId>
 	<artifactId>hexagonal</artifactId>
 	<version>${revision}</version>
@@ -17,9 +25,14 @@
 	</properties>
 
 	<modules>
+	<!-- 
 		<module>hexagonal-core</module>
+	 -->
 		<module>hexagonal-left-side</module>
 		<module>hexagonal-right-side</module>
+		<module>hexagonal-domain</module>
+		<module>hexagonal-application</module>
+		<module>hexagonal-starter</module>
 	</modules>
 
 	<!-- "dependencies" : ALWAYS be included as a dependency of the child modules -->
@@ -27,7 +40,7 @@
 		<dependency>
 		    <groupId>junit</groupId>
 		    <artifactId>junit</artifactId>
-		    <version>4.13.2</version>
+		    <!--  <version>4.13.2</version>  -->
 		    <scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -37,9 +50,31 @@
      To specify the version and/or scope in the parent (not in the child POM) -->
 	<dependencyManagement> 
 		<dependencies>
+		<!-- 
 			<dependency>
 				<groupId>org.demo</groupId>
 				<artifactId>hexagonal-core</artifactId>
+				<version>${revision}</version>
+			</dependency>
+		 -->
+			<dependency>
+				<groupId>org.demo</groupId>
+				<artifactId>hexagonal-domain</artifactId>
+				<version>${revision}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.demo</groupId>
+				<artifactId>hexagonal-application</artifactId>
+				<version>${revision}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.demo</groupId>
+				<artifactId>hexagonal-left-side</artifactId>
+				<version>${revision}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.demo</groupId>
+				<artifactId>hexagonal-right-side</artifactId>
 				<version>${revision}</version>
 			</dependency>
 

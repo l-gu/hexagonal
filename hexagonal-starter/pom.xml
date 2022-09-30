@@ -2,24 +2,34 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
+	
 	<parent>
 		<groupId>org.demo</groupId>
 		<artifactId>hexagonal</artifactId>
 		<version>${revision}</version>
 	</parent>
-
-	<artifactId>hexagonal-right-side</artifactId>
-	<!-- inherit the version from the parent  -->
+	
+	<artifactId>hexagonal-starter</artifactId>
+	<!-- inherit the version from the parent -->
 
 	<dependencies>
 		<!-- project modules dependencies (version inherited from parent POM) -->
 		<dependency>
 			<groupId>org.demo</groupId>
-			<artifactId>hexagonal-application</artifactId>
+			<artifactId>hexagonal-left-side</artifactId>
 		</dependency>
-		<!-- transitive dependency : hexagonal-domain -->
-		
+	
+<!-- 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+ -->
+ 		<!-- "starter-web is required to launch Tomcat -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
 	</dependencies>
 
 </project>
