@@ -21,11 +21,12 @@ import org.springframework.context.annotation.ComponentScan;
  *  2) define explicitly the starting point using "ComponentScan" annotation
  */
 @SpringBootApplication
-@ComponentScan(basePackages = { 
-	"org.demo.myapp.adapters.input.rest",
-	"org.demo.myapp.core",
-	"org.demo.myapp.adapters.output.db"
-})
+//@ComponentScan(basePackages = { 
+//	"org.demo.myapp.adapters.input.rest",
+//	"org.demo.myapp.core",
+//	"org.demo.myapp.adapters.output.db"
+//})
+@ComponentScan(basePackages = "org.demo.myapp") 
 public class ApplicationStarter {
 
     public static void main(String[] args) {

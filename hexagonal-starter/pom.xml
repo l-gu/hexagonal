@@ -18,6 +18,10 @@
 			<groupId>org.demo</groupId>
 			<artifactId>hexagonal-left-side</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.demo</groupId>
+			<artifactId>hexagonal-right-side</artifactId>
+		</dependency>
 	
 <!-- 
 		<dependency>
