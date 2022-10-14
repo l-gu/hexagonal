@@ -16,8 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/api/books", produces = MediaType.APPLICATION_JSON_VALUE)
 public class BookRestController {
 
-	private BookManagementService bookService ;
+	private BookManagementService bookService ; // injected
 	
+	/**
+	 * Constructor usable for Dependency Injection
+	 * @param bookService
+	 */
 	public BookRestController(BookManagementService bookService) {
 		super();
 		this.bookService = bookService;

@@ -5,3 +5,8 @@
     # username: ${JDBC_DATABASE_USERNAME:postgres}
     # password: ${JDBC_DATABASE_PASSWORD:<<YOUR_PASSWORD>>}
     
+spring:
+    main:
+        banner-mode: "off"
+        
+logging.level.org.demo.myapp.core.application.services: DEBUG
