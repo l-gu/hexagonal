@@ -9,4 +9,9 @@ spring:
     main:
         banner-mode: "off"
         
-logging.level.org.demo.myapp.core.application.services: DEBUG
+logging.level.org.demo.myapp:
+   core:
+      application:
+         services: DEBUG
+   adapters: DEBUG
+         

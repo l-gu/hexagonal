@@ -1,4 +1,4 @@
-package org.demo.myapp.core.ports.input;
+package org.demo.myapp.core.ports;
 
 import org.demo.myapp.core.domain.model.Book;
 

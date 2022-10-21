@@ -1,7 +1,7 @@
 package org.demo.myapp.core.application.services;
 
 import org.demo.myapp.core.domain.model.Book;
-import org.demo.myapp.core.ports.input.BookManagementService;
+import org.demo.myapp.core.ports.BookManagementService;
 import org.demo.myapp.core.ports.output.db.BookRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +14,7 @@ public class BookManagementServiceImpl implements BookManagementService {
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 			
-	private final BookRepository bookRepository; // injected
+	private final BookRepository bookRepository; // injected by constructor
 
 	/**
 	 * Constructor usable for Dependency Injection

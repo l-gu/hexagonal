@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/api/ping", produces = MediaType.TEXT_PLAIN_VALUE)
 public class PingRestController {
 
-	Logger logger = LoggerFactory.getLogger(PingRestController.class);
+	private static final Logger logger = LoggerFactory.getLogger(PingRestController.class);
+	
 	
     public PingRestController() {
 		super();
@@ -23,11 +24,13 @@ public class PingRestController {
 
 	@GetMapping("")
     String httpRestPing() {
+		logger.debug("ping");
 		return "pong (ok)";
     }
 
     @GetMapping("/{id}")
     String httpRestPing(@PathVariable long id) {
+		logger.debug("ping/{}", id);
 		return "pong : " + id;
     }
 
